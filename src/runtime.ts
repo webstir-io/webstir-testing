@@ -57,7 +57,7 @@ export function createRuntimeRequire(file: string): RequireFn {
   const baseRequire = Module.createRequire(file);
 
   const runtimeRequire = ((specifier: string) => {
-    if (specifier === '@webstir-io/webstir-test') {
+    if (specifier === '@webstir-io/webstir-testing') {
       return moduleExports;
     }
 
@@ -65,7 +65,7 @@ export function createRuntimeRequire(file: string): RequireFn {
   }) as RequireFn;
 
   const resolve = ((specifier: string, options?: Parameters<typeof baseRequire.resolve>[1]) => {
-    if (specifier === '@webstir-io/webstir-test') {
+    if (specifier === '@webstir-io/webstir-testing') {
       return specifier;
     }
 

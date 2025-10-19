@@ -1,5 +1,5 @@
 {
-  "name": "@webstir-io/webstir-test",
+  "name": "@webstir-io/webstir-testing",
   "version": "0.1.1",
   "description": "Testing runtime and CLI for Webstir TypeScript projects.",
   "type": "module",
@@ -32,6 +32,9 @@
     "./package.json": "./package.json"
   },
   "bin": {
+    "webstir-testing": "dist/cli.js",
+    "webstir-testing-runner": "dist/cli.js",
+    "webstir-testing-add": "dist/add-cli.js",
     "webstir-test": "dist/cli.js",
     "webstir-test-runner": "dist/cli.js",
     "webstir-test-add": "dist/add-cli.js"
