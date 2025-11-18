@@ -2,6 +2,11 @@
 
 Unified test runner, runtime helpers, and CLI for Webstir TypeScript workspaces. Provides the binaries used by the Webstir CLI and the `test` API consumed inside generated specs.
 
+## Status
+
+- Experimental test host and CLI — event shapes, flags, and discovery rules may change as the ecosystem evolves.
+- Intended for Webstir workspaces and experimentation, not yet as a general-purpose, production-stable test runner.
+
 ## Quick Start
 
 1. **Authenticate to GitHub Packages**
@@ -86,6 +91,13 @@ npm run build          # TypeScript → dist/
 - **“No tests found under src/**/tests/.”** — ensure compiled JavaScript exists in `build/**/tests/`.
 - **ESM/CommonJS errors** — the runtime attempts CommonJS first and falls back to dynamic `import()`; misconfigured TypeScript output may still surface syntax errors.
 - **Watch mode exits non-zero** — inspect emitted `WEBSTIR_TEST` events for failures.
+
+## Community & Support
+
+- Code of Conduct: https://github.com/webstir-io/.github/blob/main/CODE_OF_CONDUCT.md
+- Contributing guidelines: https://github.com/webstir-io/.github/blob/main/CONTRIBUTING.md
+- Security policy and disclosure process: https://github.com/webstir-io/.github/blob/main/SECURITY.md
+- Support expectations and contact channels: https://github.com/webstir-io/.github/blob/main/SUPPORT.md
 
 ## License
 
