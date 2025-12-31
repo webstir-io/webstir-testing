@@ -79,12 +79,17 @@ All exported types align with `@webstir-io/testing-contract`.
 
 ```bash
 npm install
+npm run clean          # remove dist artifacts
 npm run build          # TypeScript → dist/
+npm run test
+npm run smoke
+# Release helper (bumps version, pushes tags to trigger release workflow)
+npm run release -- patch
 ```
 
 - Add integration fixtures under `tests/` before enabling automated suites.
-- Ensure CI runs `npm ci`, `npm run build`, and any smoke tests prior to publishing.
-- Publishing targets GitHub Packages per `publishConfig`.
+- Ensure CI runs `npm ci`, `npm run clean`, `npm run build`, `npm run test`, and `npm run smoke` prior to publishing.
+- Publishing targets GitHub Packages per `publishConfig` and is triggered by the release workflow.
 
 ## Troubleshooting
 
