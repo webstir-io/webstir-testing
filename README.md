@@ -9,17 +9,11 @@ Unified test runner, runtime helpers, and CLI for Webstir TypeScript workspaces.
 
 ## Quick Start
 
-1. **Authenticate to GitHub Packages**
-   ```ini
-   # .npmrc
-   @webstir-io:registry=https://npm.pkg.github.com
-   //npm.pkg.github.com/:_authToken=${GH_PACKAGES_TOKEN}
-   ```
-2. **Install**
+1. **Install**
    ```bash
    npm install --save-dev @webstir-io/webstir-testing
    ```
-3. **Run tests**
+2. **Run tests**
    ```bash
    npx webstir-testing --workspace /absolute/path/to/workspace
    ```
@@ -89,7 +83,7 @@ npm run release -- patch
 
 - Add integration fixtures under `tests/` before enabling automated suites.
 - Ensure CI runs `npm ci`, `npm run clean`, `npm run build`, `npm run test`, and `npm run smoke` prior to publishing.
-- Publishing targets GitHub Packages per `publishConfig` and is triggered by the release workflow.
+- The release workflow publishes to npm using trusted publishing (`id-token: write` + provenance).
 
 ## Troubleshooting
 
