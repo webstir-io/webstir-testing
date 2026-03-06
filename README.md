@@ -1,5 +1,12 @@
 # @webstir-io/webstir-testing
 
+> This repository is legacy and no longer the source of truth.
+> Active development has moved to the canonical Webstir monorepo:
+> [webstir-io/webstir](https://github.com/webstir-io/webstir)
+>
+> Package source location in the monorepo:
+> `packages/tooling/webstir-testing`
+
 Unified test runner, runtime helpers, and CLI for Webstir TypeScript workspaces. Provides the binaries used by the Webstir CLI and the `test` API consumed inside generated specs.
 
 ## Status
